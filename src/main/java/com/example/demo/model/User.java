@@ -5,13 +5,10 @@ import jakarta.persistence.Id;
 public class User{
     @Id
     private Long id;
-    private string name;
+    private String name;
     @Column(unique=true)
-    private string email;
-    private string password;
-    private string ADMIN;
-    private string ANALYST;
-    public User(Long id, string name, string email, string password, string aDMIN, string aNALYST) {
+    private String email;
+    public User(Long id, String name, String email, String password, String aDMIN, String aNALYST) {
         this.id = id;
         this.name = name;
         this.email = email;
@@ -19,42 +16,45 @@ public class User{
         ADMIN = aDMIN;
         ANALYST = aNALYST;
     }
+    private String password;
+    private String ADMIN;
     public User() {
     }
+    private String ANALYST;
     public Long getId() {
         return id;
     }
     public void setId(Long id) {
         this.id = id;
     }
-    public string getName() {
+    public String getName() {
         return name;
     }
-    public void setName(string name) {
+    public void setName(String name) {
         this.name = name;
     }
-    public string getEmail() {
+    public String getEmail() {
         return email;
     }
-    public void setEmail(string email) {
+    public void setEmail(String email) {
         this.email = email;
     }
-    public string getPassword() {
+    public String getPassword() {
         return password;
     }
-    public void setPassword(string password) {
+    public void setPassword(String password) {
         this.password = password;
     }
-    public string getADMIN() {
+    public String getADMIN() {
         return ADMIN;
     }
-    public void setADMIN(string aDMIN) {
+    public void setADMIN(String aDMIN) {
         ADMIN = aDMIN;
     }
-    public string getANALYST() {
+    public String getANALYST() {
         return ANALYST;
     }
-    public void setANALYST(string aNALYST) {
+    public void setANALYST(String aNALYST) {
         ANALYST = aNALYST;
     }
 }

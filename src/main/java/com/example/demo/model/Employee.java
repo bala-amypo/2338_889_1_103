@@ -1,14 +1,14 @@
 package com.example.demo.model;
 
-import jakarta.persistence.Column;
+
 import jakarta.persistence.Id;
 public class Employee{
     @Id
     private Long id;
-    private string name;
-    @Column(unique=true)
-    private string email;
-    private string password;
-    private string ADMIN;
-    private string ANALYST;
+    private String fullName;
+    private String ADMIN;
+    private String STAFF;
+    private String skills;
+    private Int maxWeeklyHours;
+
 }
