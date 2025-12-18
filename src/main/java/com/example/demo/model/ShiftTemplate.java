@@ -2,19 +2,14 @@ package com.example.demo.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Id;
-import jakarta.validation.constraints.Min;
-public class Employee{
+
+public class ShiftTemplate{
     @Id
     private Long id;
+     @Column(unique=true)
     private String templateName;
     private LocalTime startTime;
-     @Column(unique=true)
-    private String email;
-    private String ADMIN;
-    private String STAFF;
-    private String skills;
-    @Min(1)
-    private Int maxWeeklyHours;
-    private LocalDateTime createdAt;
+    private LocalTime endTime;
+    private String requiredSkills;;
 
 }
