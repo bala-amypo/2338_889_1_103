@@ -2,6 +2,7 @@ package com.example.demo.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Id;
+import jakarta.validation.constraints.Min;
 public class Employee{
     @Id
     private Long id;
@@ -13,5 +14,6 @@ public class Employee{
     private String skills;
     @Min(1)
     private Int maxWeeklyHours;
+    private LocalDateTime createdAt;
 
 }
