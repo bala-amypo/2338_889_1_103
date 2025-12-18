@@ -1,7 +1,7 @@
 package com.example.demo.repository;
 import org.springframework.data.jpa.repository.JpaRepository;
-import com.example.demo.entity.User;
+import com.example.demo.entity.ShiftTemplate;
 
-public interface UserRepository extends JpaRepository<User,Long>{
+public interface ShiftTemplateRepository extends JpaRepository<ShiftTemplate,Long>{
 
 }
