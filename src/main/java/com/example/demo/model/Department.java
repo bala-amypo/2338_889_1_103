@@ -6,10 +6,10 @@ import jakarta.validation.constraints.Min;
 public class Employee{
     @Id
     private Long id;
-     @Column(unique=true)
+    @Column(unique=true)
     private String name;
     private String description;
-        @Min(1)
+    @Min()
     private String requiredSkills;
     private LocalDateTime createdAt;
      
