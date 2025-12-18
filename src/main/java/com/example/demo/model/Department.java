@@ -3,6 +3,7 @@ package com.example.demo.model;
 import jakarta.persistence.Column;
 import jakarta.persistence.Id;
 import jakarta.validation.constraints.Min;
+import java.time.LocalDateTime;
 public class Department{
     @Id
     private Long id;

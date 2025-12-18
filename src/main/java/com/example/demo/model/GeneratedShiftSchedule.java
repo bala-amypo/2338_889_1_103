@@ -3,7 +3,7 @@ package com.example.demo.model;
 
 import jakarta.persistence.Id;
 ;
-public class Employee{
+public class GeneratedShiftSchedule{
     @Id
     private Long id;
     private LocalDate shiftDate;
