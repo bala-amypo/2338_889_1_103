@@ -6,6 +6,7 @@ public class EmployeeAvailability{
     @Id
     private Long id;
     private employee;
-    private LocalDate shiftDate;
+    private LocalDate availableDate;
+    private Boolean available;
 
 }
