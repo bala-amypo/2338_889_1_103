@@ -8,34 +8,34 @@ import java.util.List;
 
 @Service
 public class DepartmentServiceImpl implements DepartmentService {
-    
+
     private final DepartmentRepository departmentRepository;
-    
+
     public DepartmentServiceImpl(DepartmentRepository departmentRepository) {
         this.departmentRepository = departmentRepository;
     }
-    
+
     @Override
     public Department create(Department department) {
         if (departmentRepository.existsByName(department.getName())) {
-            throw new RuntimeException("Department with name already exists");
+            throw new RuntimeException("Department name already exists");
         }
         return departmentRepository.save(department);
     }
-    
+
     @Override
     public Department get(Long id) {
         return departmentRepository.findById(id)
-            .orElseThrow(() -> new RuntimeException("Department not found"));
+                .orElseThrow(() -> new RuntimeException("Department not found"));
     }
-    
+
     @Override
     public void delete(Long id) {
         Department department = departmentRepository.findById(id)
-            .orElseThrow(() -> new RuntimeException("Department not found"));
+                .orElseThrow(() -> new RuntimeException("Department not found"));
         departmentRepository.delete(department);
     }
-    
+
     @Override
     public List<Department> getAll() {
         return departmentRepository.findAll();
