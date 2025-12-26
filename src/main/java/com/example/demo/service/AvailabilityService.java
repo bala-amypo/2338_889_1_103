@@ -9,6 +9,4 @@ public interface AvailabilityService {
     EmployeeAvailability update(Long id, EmployeeAvailability availability);
     void delete(Long id);
     List<EmployeeAvailability> getByDate(LocalDate date);
-    EmployeeAvailability getById(Long id);
-    List<EmployeeAvailability> getByEmployee(Long employeeId);
 }
