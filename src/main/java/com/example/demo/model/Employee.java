@@ -1,9 +1,20 @@
 package com.example.demo.model;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "employees")
 public class Employee {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    
+    @Column(nullable = false)
     private String fullName;
+    
+    @Column(unique = true, nullable = false)
     private String email;
+    
     private String role;
     private String skills;
     private Integer maxHoursPerWeek;
